@@ -1,4 +1,5 @@
 import React from 'react'
+import Home from './Home'
 
 class App extends React.Component {
   constructor(props) {
@@ -15,7 +16,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <h1>React development has begun!</h1>
+      <>
+      <Home />
+      </>
     )
   }
 }
