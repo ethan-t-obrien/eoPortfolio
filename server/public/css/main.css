@@ -55,6 +55,29 @@ p {
   word-spacing: 1rem;
 }
 
+.social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 2rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 6%;
+  margin: auto;
+}
+
+.social-icons a {
+  color: #D9D9D9;
+  font-size: 1.5rem;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: #F28379;
+}
+
 .nav {
   position: fixed;
   top: 0;
@@ -85,6 +108,12 @@ p {
   padding: 2rem 0;
   font-weight: 300;
   color: #D9D9D9;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.menu__link:hover {
+  color: #F28379;
 }
 
 body {

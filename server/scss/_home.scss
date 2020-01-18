@@ -50,3 +50,20 @@ p {
   font-weight: 100;
   word-spacing: 1rem;
 }
+
+.social-icons {
+  display: flex;
+  padding-top: 2rem;
+  justify-content: space-between;
+  width: 6%;
+  margin: auto;
+  a {
+    color: $text-color;
+    font-size: 1.5rem;
+    @include transition-ease;
+
+      &:hover {
+        color: $secondary-color;
+      }
+  }
+}
