@@ -1,6 +1,9 @@
 import React from 'react'
 import Home from './Home'
 import Nav from './Nav'
+import Projects from './Projects'
+
+import { HashRouter as Router, Route, Link, Redirect} from 'react-router-dom'
 
 class App extends React.Component {
   constructor(props) {
@@ -17,10 +20,12 @@ class App extends React.Component {
 
   render() {
     return (
-      <>
-      <Nav />
-      <Home />
-      </>
+      <Router>
+        <Route path='/' component={Nav} />
+        <Route path='/' exact component={Home} />
+        <Route path='/projects' exact component={Projects} />
+
+      </Router>
     )
   }
 }
