@@ -1,5 +1,6 @@
 import React from 'react'
 import Home from './Home'
+import Nav from './Nav'
 
 class App extends React.Component {
   constructor(props) {
@@ -17,6 +18,7 @@ class App extends React.Component {
   render() {
     return (
       <>
+      <Nav />
       <Home />
       </>
     )

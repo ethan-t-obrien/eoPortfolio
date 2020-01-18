@@ -6,3 +6,25 @@
   opacity: 0.98;
   color: $primary-color;
 }
+
+.menu {
+  display: block;
+  height: 100%;
+  background: transparent;
+  transform: translateY();
+  text-align: right;
+  padding-top: .5rem;
+
+  &__item {
+    display: inline;
+    padding-right: 1.5rem;
+  }
+
+   &__link {
+     font-size: 1.5rem;
+     text-transform: uppercase;
+     padding: 2rem 0;
+     font-weight: 300;
+     color: $text-color;
+   }
+}

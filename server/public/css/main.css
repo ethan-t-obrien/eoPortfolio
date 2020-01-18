@@ -40,6 +40,53 @@
   font-weight: 700;
 }
 
+.stack {
+  position: fixed;
+  width: 100vw;
+  opacity: 9.8;
+  bottom: 4rem;
+}
+
+p {
+  text-align: center;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 100;
+  word-spacing: 1rem;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  opacity: 0.98;
+  color: #404040;
+}
+
+.menu {
+  display: block;
+  height: 100%;
+  background: transparent;
+  -webkit-transform: translateY();
+          transform: translateY();
+  text-align: right;
+  padding-top: .5rem;
+}
+
+.menu__item {
+  display: inline;
+  padding-right: 1.5rem;
+}
+
+.menu__link {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 2rem 0;
+  font-weight: 300;
+  color: #D9D9D9;
+}
+
 body {
   background: #404040;
   color: #D9D9D9;
