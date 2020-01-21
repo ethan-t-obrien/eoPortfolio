@@ -32,9 +32,9 @@ class Projects extends React.Component {
          </div>
          <div className="projects__item">
            <img src="./img/codeImage.jpg" alt="db-deals"/>
-           <h3>DB-deals</h3>
+           <h3>Happy Hour</h3>
            <div className="projects__btns">
-             <a href="" className="projects__btn">
+             <a href="https://happy-hour-hihi.herokuapp.com/" className="projects__btn">
                <i className='fas fa-eye'></i> Live
              </a>
              <a href="https://github.com/ethan-t-obrien/db-deals" className="projects__btn">
@@ -43,13 +43,13 @@ class Projects extends React.Component {
            </div>
          </div>
          <div className="projects__item">
-           <img src="./img/codeImage.jpg" alt="RECCaban Project"/>
-           <h3>RECCaban</h3>
+           <img src="./img/codeImage.jpg" alt="Treasure Project"/>
+           <h3>Treasure</h3>
            <div className="projects__btns">
-             <a href="" className="projects__btn">
+             <a href="https://treasureless.herokuapp.com/" className="projects__btn">
                <i className='fas fa-eye'></i> Live
              </a>
-             <a href="" className="projects__btn">
+             <a href="https://github.com/ethan-t-obrien/treasure" className="projects__btn">
                <i className='fas fa-github'></i> Code
              </a>
            </div>
