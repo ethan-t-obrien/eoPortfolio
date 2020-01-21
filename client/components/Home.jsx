@@ -15,7 +15,7 @@ class Home extends React.Component {
 
   render() {
     return (
-      <>
+      <body>
       <div className="home">
         <h1 className="home__name">Ethan O'Brien</h1>
         <h1 className="home__dev">Web Developer</h1>
@@ -32,7 +32,7 @@ class Home extends React.Component {
             </a>
           </div>
       </div>
-      </>
+      </body>
     )
   }
 }
