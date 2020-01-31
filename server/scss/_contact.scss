@@ -1,0 +1,30 @@
+.contact {
+  
+}
+
+.formControl {
+  background-color: rgba($color: #5e808b, $alpha: .4);
+  border: none;
+  color: $text-color;
+  padding-top: .5rem;
+  margin: auto;
+  margin-top: .2rem;
+  display: block;
+  width: 40%;
+}
+
+::placeholder {
+  color: $text-color;
+}
+
+.btn {
+  margin-top: .2rem;
+  background-color: $secondary-color;
+  color: $primary-color;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+}
+#message {
+  padding-bottom: 3rem;
+}

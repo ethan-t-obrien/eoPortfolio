@@ -243,6 +243,46 @@
   font-weight: 100;
 }
 
+.formControl {
+  background-color: rgba(94, 128, 139, 0.4);
+  border: none;
+  color: #D9D9D9;
+  padding-top: .5rem;
+  margin: auto;
+  margin-top: .2rem;
+  display: block;
+  width: 40%;
+}
+
+::-webkit-input-placeholder {
+  color: #D9D9D9;
+}
+
+:-ms-input-placeholder {
+  color: #D9D9D9;
+}
+
+::-ms-input-placeholder {
+  color: #D9D9D9;
+}
+
+::placeholder {
+  color: #D9D9D9;
+}
+
+.btn {
+  margin-top: .2rem;
+  background-color: #F28379;
+  color: #404040;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+}
+
+#message {
+  padding-bottom: 3rem;
+}
+
 body {
   background: #404040;
   color: #D9D9D9;
