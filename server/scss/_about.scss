@@ -1,0 +1,19 @@
+.about {
+  margin: auto;
+  background-color: rgba($color: #606668, $alpha: .4);
+  height: 30%;
+  width: 60%;
+  
+
+  &__heading{
+    padding-top: .5rem;
+    padding-bottom: 1rem;
+  }
+
+  &__graph {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 100;
+  
+  }
+}

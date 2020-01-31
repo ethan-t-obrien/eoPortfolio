@@ -47,7 +47,7 @@
   bottom: 4rem;
 }
 
-p {
+.stack {
   text-align: center;
   font-size: 1rem;
   text-transform: uppercase;
@@ -223,6 +223,24 @@ p {
 
 .projects__btn:hover {
   color: #F28379;
+}
+
+.about {
+  margin: auto;
+  background-color: rgba(96, 102, 104, 0.4);
+  height: 30%;
+  width: 60%;
+}
+
+.about__heading {
+  padding-top: .5rem;
+  padding-bottom: 1rem;
+}
+
+.about__graph {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 100;
 }
 
 body {

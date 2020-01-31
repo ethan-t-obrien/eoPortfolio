@@ -22,7 +22,7 @@ class Home extends React.Component {
       </div>
 
       <div className="stack">
-        <p>HTML/CSS | Javascript | Node.js | React | Redux | Express | Knex | SQL | Sass | Rest-ful APIs</p>
+        <p className="text">HTML/CSS | Javascript | Node.js | React | Redux | Express | Knex | SQL | Sass | Rest-ful APIs</p>
           <div className="social-icons">
             <a href="#" target='_blank'>
             <i className="fab fa-linkedin"></i>
