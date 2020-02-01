@@ -1,5 +1,4 @@
 import React from 'react'
-import axios from 'axios'
 
 class Contact extends React.Component {
   constructor(props) {
@@ -7,57 +6,43 @@ class Contact extends React.Component {
     this.state = {
       name: '',
       email: '',
-      message: '',
-      sent: false,
-      buttonText: 'Submit'
+      message: ''
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
 
-  resetForm = () => {
-    this.setState({
-      name: '',
-      emaile: '',
-      message: '',
-      buttonText: 'Message Sent'
-    })
-  }
-
+  
   handleSubmit(event){
     event.preventDefault();
    
-    this.setState({
-      buttonText: '..sending'
-    })
-
-      let data = {
-        name: this.state.name,
-        email: this.state.email,
-        message: this.state.message
-      }
-
-      axios.post('API_URI', data)
-      .then( res => {
-        this.setState({ sent: true }, this.resetForm())
-      })
-      .catch( () => {
-        console.log('Message not sent')
-      })
+    var template_params = {
+      "reply_to": this.state.email,
+      "from_name": this.state.name,
+      "to_name": "Ethan",
+      "message_html": this.state.message
+   }
+   
+   var service_id = "default_service";
+   var template_id = "template_1Sjl26az";
+   emailjs.send(service_id, template_id, template_params)
+    .then(function(response) {
+      console.log('SUCCESS!', response.status, response.text);
+   }, function(error) {
+      console.log('FAILED...', error);
+   })
   }
 
+  
 
-  resetForm() {
-    this.setState({name: '', email: '', message: ''})
-  }
-
+  
   handleChange(event) {
     this.setState({
       [event.target.name]: event.target.value
     })
     console.log(this.state)
   }
-
+  
 
 
   render() {
@@ -90,8 +75,7 @@ class Contact extends React.Component {
             name="message"
             placeholder="Your message.."/>
 
-            <button type="submit" value="Submit" className="btn"> { this.state.buttonText}
-            </button>
+            <input type="submit" value="Submit" className="btn"/> 
             </form>
        </div>
      </div>
