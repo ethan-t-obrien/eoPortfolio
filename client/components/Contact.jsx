@@ -8,27 +8,44 @@ class Contact extends React.Component {
       name: '',
       email: '',
       message: '',
+      sent: false,
+      buttonText: 'Submit'
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleSubmit(e){
-    e.preventDefault();
-
-    axios({
-      method: "POST", 
-      url:"http://localhost:3002/send", 
-      data:  this.state
-    }).then((response)=>{
-      if (response.data.status === 'success'){
-        alert("Message Sent."); 
-        this.resetForm()
-      }else if(response.data.status === 'fail'){
-        alert("Message failed to send.")
-      }
+  resetForm = () => {
+    this.setState({
+      name: '',
+      emaile: '',
+      message: '',
+      buttonText: 'Message Sent'
     })
   }
+
+  handleSubmit(event){
+    event.preventDefault();
+   
+    this.setState({
+      buttonText: '..sending'
+    })
+
+      let data = {
+        name: this.state.name,
+        email: this.state.email,
+        message: this.state.message
+      }
+
+      axios.post('API_URI', data)
+      .then( res => {
+        this.setState({ sent: true }, this.resetForm())
+      })
+      .catch( () => {
+        console.log('Message not sent')
+      })
+  }
+
 
   resetForm() {
     this.setState({name: '', email: '', message: ''})
@@ -38,6 +55,7 @@ class Contact extends React.Component {
     this.setState({
       [event.target.name]: event.target.value
     })
+    console.log(this.state)
   }
 
 
@@ -55,20 +73,25 @@ class Contact extends React.Component {
             onChange={this.handleChange}
             name="name"
             placeholder="Name.."/>
+
             <input type="text" 
             className="formControl"
             value={this.state.email}
             onChange={this.handleChange}
+            aria-describedby="emailHelp"
             name="email"
             placeholder="Email.."/>
+
             <input type="text" 
             className="formControl"
-            value={this.state.mail}
+            value={this.state.message}
             onChange={this.handleChange}
             id="message"
             name="message"
             placeholder="Your message.."/>
-            <input type="submit" value="Submit" className="btn"/>
+
+            <button type="submit" value="Submit" className="btn"> { this.state.buttonText}
+            </button>
             </form>
        </div>
      </div>
