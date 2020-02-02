@@ -24,10 +24,10 @@ class Home extends React.Component {
       <div className="stack">
         <p className="text">HTML/CSS | Javascript | Node.js | React | Redux | Express | Knex | SQL | Sass | Rest-ful APIs</p>
           <div className="social-icons">
-            <a href="#" target='_blank'>
+            <a href="https://www.linkedin.com/in/ethan-o-brien-43837b180/" target='_blank'>
             <i className="fab fa-linkedin"></i>
             </a>
-            <a href="#" target='_blank'>
+            <a href="https://github.com/ethan-t-obrien" target='_blank'>
             <i className="fab fa-github-square"></i>
             </a>
           </div>
