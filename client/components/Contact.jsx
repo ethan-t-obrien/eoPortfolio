@@ -28,12 +28,21 @@ class Contact extends React.Component {
    emailjs.send(service_id, template_id, template_params)
     .then(function(response) {
       console.log('SUCCESS!', response.status, response.text);
+      alert('Success')
    }, function(error) {
       console.log('FAILED...', error);
+      alert('Failed to send')
    })
+   this.resetForm()
   }
 
-  
+  resetForm() {
+    this.setState({
+      name: '',
+      email: '',
+      message: ''
+    })
+  }
 
   
   handleChange(event) {
