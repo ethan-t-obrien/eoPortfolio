@@ -39,7 +39,7 @@ class Nav extends React.Component {
             </Link>
             </li>
             <li className="menu__item">
-            <Link to='/resume' className="menu__link">
+            <Link to='./img/EO_Resume.pdf' className="menu__link" target='_blank' download>
               Resume
             </Link>
             </li>
